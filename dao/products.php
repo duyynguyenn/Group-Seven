@@ -35,48 +35,4 @@ function product_delete($id)
   pdo_execute($sql, $id);
 }
 
-//tăng lượt xem
-function product_increase_view()
-{
-}
-//tăng số lượng bán
-function product_increase_sales()
-{
-}
-//top 10 lượt xem nhiều nhất
-function product_select_top10_views()
-{
-}
-//top 10 hàng bán chạy
-function product_select_top10_best_sellers()
-{
-}
-//sản phẩm nổi bật
-function product_select_features()
-{
-}
-//tìm kiếm bằng loại
-function product_select_by_category()
-{
-}
-//tìm kiếm bằng thương hiệu
-function product_select_by_brand()
-{
-}
-//tìm kiếm bằng value của loại hoặc sản phẩm
-function product_select_value()
-{
-}
-//giảm số lượng hàng trong kho khi thanh toán
-function product_decrease_quantity()
-{
-}
-//sắp xếp theo giá
-function product_sort_by_price()
-{
-}
-// lấy ra top 10 sản phẩm cùng loại
-function product_select_top10_relate($category_id)
-{
-}
-//trang
+
