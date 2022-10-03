@@ -2,9 +2,9 @@
 function pdo_get_connection()
 {
   $servername = "202.92.5.49";
-  $username = "dfigfagghosting_nhom6";
-  $password = "9I46KYJB2pJd";
-  $dbname = "dfigfagghosting_nhom6";
+  $username = "wrqphlwwhosting_nhom7";
+  $password = "duycon2003";
+  $dbname = "wrqphlwwhosting_nhom7";
   try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8;", $username, $password);
     // set the PDO error mode to exception
@@ -27,7 +27,7 @@ function pdo_execute($sql)
     throw $e;
   } finally {
     unset($conn);
-    // àhafhahfhf
+    
   }
 }
 function pdo_query($sql)
