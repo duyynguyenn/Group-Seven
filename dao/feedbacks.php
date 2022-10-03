@@ -34,3 +34,4 @@ function feedbacks_delete($id)
   }
   pdo_execute($sql, $id);
 }
+?>
