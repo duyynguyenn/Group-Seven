@@ -27,12 +27,7 @@ function feedbacks_update($id, $user_id,$phone,$email,$question)
 //xoá bản ghi dựa vào id
 function feedbacks_delete($id)
 {
-  $sql = "DELETE FROM feedbacks WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $sql = " delete from feedbacks where id = ? " ;
+  pdo_execute ( $sql , $id ) ;
 }
 ?>

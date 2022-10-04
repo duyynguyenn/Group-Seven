@@ -27,12 +27,7 @@ function recipients_update($id, $name, $phone, $recipients_id, $user_id)
 //xoá bản ghi dựa vào id
 function recipients_delete($id)
 {
-  $sql = "DELETE FROM recipients WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $sql = " delete from recipients where id = ? " ;
+  pdo_execute ( $sql , $id ) ;
 }
 ?>

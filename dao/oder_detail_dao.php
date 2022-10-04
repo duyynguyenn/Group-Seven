@@ -27,12 +27,7 @@ function oder_detail_update($id,$quantity, $product_id,$oder_id,$user_id)
 //xoá bản ghi dựa vào id
 function oder_detail_delete($id)
 {
-  $sql = "DELETE FROM oder_detail WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $sql = " delete from oder_detail where id = ? " ;
+  pdo_execute ( $sql , $id ) ;
 }
 ?>

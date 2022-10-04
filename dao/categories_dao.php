@@ -27,12 +27,9 @@ function categories_update($id, $name, $image)
 //xoá bản ghi dựa vào id
 function categories_delete($id)
 {
-  $sql = "DELETE FROM categories WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $removeProductsWithCategories = " delete from products where category_id = ? " ;
+  pdo_execute ( $removeProductsWithCategories , $id ) ;
+  $removeCategoriesQuery = " delete from categories where id = ? " ;
+  pdo_execute ( $removeCategoriesQuery , $id ) ;
 }
 ?>

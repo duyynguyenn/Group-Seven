@@ -27,12 +27,7 @@ function comments_update($id,$created_at,$comment,$user_id,$product_id)
 //xoá bản ghi dựa vào id
 function comments_delete($id)
 {
-  $sql = "DELETE FROM comments WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $sql = " delete from comments where id = ? " ;
+  pdo_execute ( $sql , $id ) ;
 }
 ?>

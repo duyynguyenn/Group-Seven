@@ -27,12 +27,9 @@ function oders_update($id,$price, $created_at)
 //xoá bản ghi dựa vào id
 function oders_delete($id)
 {
-  $sql = "DELETE FROM oders WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $removeOder_detailsWithOders = " delete from oder_detail where oder_id = ? " ;
+  pdo_execute ( $removeOder_detailsWithOders , $id ) ;
+  $removeOdersQuery = " delete from oders where id = ? " ;
+  pdo_execute ( $removeOdersQuery , $id ) ;
 }
 ?>

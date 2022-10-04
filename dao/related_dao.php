@@ -27,12 +27,9 @@ function related_update($id, $name, $image)
 //xoá bản ghi dựa vào id
 function related_delete($id)
 {
-  $sql = "DELETE FROM related WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $removeProductsWithRelated = " delete from products where related_id = ? " ;
+  pdo_execute ( $removeProductsWithRelated , $id ) ;
+  $removeRelatedQuery = " delete from related where id = ? " ;
+  pdo_execute ( $removeRelatedQuery , $id ) ;
 }
 ?>
