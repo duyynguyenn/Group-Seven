@@ -29,12 +29,16 @@ function users_delete($id)
 {
   $removeOder_detailWithUsers = " delete from oder_detail where user_id = ? " ;
   pdo_execute ( $removeOder_detailWithUsers , $id ) ;
+
   $removeRecipientsWithUsers = " delete from oder_detail where user_id = ? " ;
   pdo_execute ( $removeRecipientsWithUsers , $id ) ;
+
   $removeFeedbacksWithUsers = " delete from feedbacks where user_id = ? " ;
   pdo_execute ( $removeFeedbacksWithUsers , $id ) ;
+
   $removeCommentsWithUsers = " delete from comments where user_id = ? " ;
   pdo_execute ( $removeCommentsWithUsers , $id ) ;
+  
   $removeUsersQuery = " delete from users where id = ? " ;
   pdo_execute ( $removeUsersQuery , $id ) ;
 }
