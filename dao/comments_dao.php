@@ -13,16 +13,16 @@ function comments_select_by_id($id)
   return pdo_query_one($sql, $id);
 }
 //thêm dữ liệu vào bảng
-function comments_insert($name, $image)
+function comments_insert($created_at, $comment,$user_id,$product_id)
 {
-  $sql = "INSERT INTO comments (created_at,comment,user_id,product_id) values(?,?)";
+  $sql = "INSERT INTO comments (created_at,comment,user_id,product_id) values(?,?,?,?)";
   pdo_execute($sql,$created_at,$comment,$user_id,$product_id);
 }
 //cập nhập dữ liệu dựa vào id
-function comments_update($id,$created_at,$comment,$user_id,$product_id);
+function comments_update($id,$created_at,$comment,$user_id,$product_id)
 {
   $sql = "UPDATE comments SET created_at = ?, comment = ?, user_id = ?, product_id = ?, where id = ?";
-  pdo_execute($sql,$created_at,$comment,$user_id,$product_id);
+  pdo_execute($sql,$created_at,$comment,$user_id,$product_id,$id);
 }
 //xoá bản ghi dựa vào id
 function comments_delete($id)

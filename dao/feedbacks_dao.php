@@ -13,16 +13,16 @@ function feedbacks_select_by_id($id)
   return pdo_query_one($sql, $id);
 }
 //thêm dữ liệu vào bảng
-function feedbacks_insert($user_id,$phone,$email,$question);
+function feedbacks_insert($user_id,$phone,$email,$question)
 {
-  $sql = "INSERT INTO feedbacks (user_id,phone,email,question) values(?,?)";
+  $sql = "INSERT INTO feedbacks (user_id,phone,email,question) values(?,?,?,?)";
   pdo_execute($sql, $user_id, $phone ,$email,$question);
 }
 //cập nhập dữ liệu dựa vào id
 function feedbacks_update($id, $user_id,$phone,$email,$question)
 {
   $sql = "UPDATE feedbacks SET user_id = ?, phone = ? ,email = ? ,question = ? where id = ?";
-  pdo_execute($sql, $user_id, $phone ,$email,$question);
+  pdo_execute($sql, $user_id, $phone ,$email,$question,$id);
 }
 //xoá bản ghi dựa vào id
 function feedbacks_delete($id)
