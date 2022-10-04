@@ -1,4 +1,5 @@
 <?php
+require_once './dao/base_dao.php';
 // lấy toàn bộ dữ liệu của bảng
 function product_select_all()
 {
@@ -34,3 +35,4 @@ function product_delete($id)
   }
   pdo_execute($sql, $id);
 }
+?>

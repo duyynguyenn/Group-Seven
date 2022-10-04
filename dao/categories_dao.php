@@ -1,4 +1,5 @@
 <?php
+require_once './dao/base_dao.php';
 // lấy toàn bộ dữ liệu của bảng
 function categories_select_all()
 {
