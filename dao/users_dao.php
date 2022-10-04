@@ -27,12 +27,15 @@ function users_update($id, $name, $email , $password , $phone , $admin , $avatar
 //xoá bản ghi dựa vào id
 function users_delete($id)
 {
-  $sql = "DELETE FROM users WHERE id = ?";
-  if (is_array($id)) {
-    foreach ($id as $item) {
-      pdo_execute($sql, $item);
-    }
-  }
-  pdo_execute($sql, $id);
+  $removeOder_detailWithUsers = " delete from oder_detail where user_id = ? " ;
+  pdo_execute ( $removeOder_detailWithUsers , $id ) ;
+  $removeRecipientsWithUsers = " delete from oder_detail where user_id = ? " ;
+  pdo_execute ( $removeRecipientsWithUsers , $id ) ;
+  $removeFeedbacksWithUsers = " delete from feedbacks where user_id = ? " ;
+  pdo_execute ( $removeFeedbacksWithUsers , $id ) ;
+  $removeCommentsWithUsers = " delete from comments where user_id = ? " ;
+  pdo_execute ( $removeCommentsWithUsers , $id ) ;
+  $removeUsersQuery = " delete from users where id = ? " ;
+  pdo_execute ( $removeUsersQuery , $id ) ;
 }
 ?>
