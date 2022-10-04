@@ -22,7 +22,7 @@ function users_insert($name, $email , $password , $phone , $admin , $avatar , $c
 function users_update($id, $name, $email , $password , $phone , $admin , $avatar , $created_at )
 {
   $sql = "UPDATE users SET name = ?, email = ? , password = ? , phone = ? , avatar = ? , created_at = ? where id = ?";
-  pdo_execute($sql, $name, $email , $password , $phone , $admin , $avatar , $created_at );
+  pdo_execute($sql, $name, $email , $password , $phone , $admin , $avatar , $created_at,$id);
 }
 //xoá bản ghi dựa vào id
 function users_delete($id)
