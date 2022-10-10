@@ -1,0 +1,1 @@
+<h2 class="text-center text-[30px] font-bold">QUẢN TRỊ WEBSITE</h2>
