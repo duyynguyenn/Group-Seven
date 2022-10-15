@@ -11,9 +11,9 @@
     <tbody>
         <tr>
             <td class="border border-slate-300 text-center"><input type="radio" name="" id=""></td>
-            <td class="border border-slate-300 text-center">1000</td>
+            <td class="border border-slate-300 text-center">1</td>
             <td class="border border-slate-300 text-center">thuốc</td>
-            <td class="border border-slate-300"><a href="" class="bg-[#D9D9D9] py-[3px] px-[10px] ml-[20px] mr-[20px]">Sửa</a>
+            <td class="border border-slate-300"><a href="<?= ADMIN_URL. 'loai-hang/index.php?edit' ?>" class="bg-[#D9D9D9] py-[3px] px-[10px] ml-[20px] mr-[20px]">Sửa</a>
                 <a href="" class="bg-[#D9D9D9] py-[3px] px-[10px]">Xóa</a> 
             </td>
         </tr>
@@ -26,6 +26,6 @@
         <li class="bg-green-100 py-3 px-3"><a href="">bỏ chọn tất cả</a></li>
         <li class="bg-green-100 py-3 px-3"><a href="">xóa các mục chọn </a></li>
         <li class="bg-green-100 py-3 px-3"><a href="">nhập thêm</a></li>
-        <li class="bg-green-100 py-3 px-3"><a href="index.php">Thêm mới</a></li>
+        <li class="bg-green-100 py-3 px-3"> <a href="<?= ADMIN_URL . 'loai-hang/index.php?add' ?>">Thêm mới</a></li>
     </ul>
 </div>

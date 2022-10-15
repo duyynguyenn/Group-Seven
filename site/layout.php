@@ -14,7 +14,7 @@ require_once '../global.php';
 <body>
   <div class="mx-[10px] max-w-[1440px] mx-auto">
     <section class="bg-[#253796] flex justify-around ">
-    <img class="py-[30px] " src="<?= CONTENT_URL ?>/image/logo.png" alt="">
+    <img class="py-[30px] " src="<?= CONTENT_URL . '/image/logo.png'?>" alt="">
     <form class="bg-[#AE2B2B] flex h-[76px] w-[482px] rounded-[50px]  my-[25px]">
         <input type="text" name="" id="" value="Tìm sản phẩm" class="pl-[37px] bg-[#AE2B2B] rounded-l-[50px] text-[32px] text-white border-r-2 border-black">
         <button class="ml-[20px] w-[40px]"><img src="<?= CONTENT_URL ?>/image/icons/magnifying.svg" alt=""></button>
@@ -51,7 +51,7 @@ require_once '../global.php';
         <div class="grid grid-cols-4 gap-32 flex justify-center ">
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/ảnh thuốc siro,forte-mom 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/ảnh thuốc siro,forte-mom 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -61,7 +61,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/trùng thảo 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/trùng thảo 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -71,7 +71,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/thuốc baywod 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/thuốc baywod 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -81,7 +81,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/shark-catilage 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/shark-catilage 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -91,7 +91,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/active lung 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/active lung 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -101,7 +101,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/best-king 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/best-king 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -111,7 +111,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/plus echina 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/plus echina 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -121,7 +121,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>img/kids 1.png" alt="">
+              <img src="<?= CONTENT_URL ?>image/kids 1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -136,7 +136,7 @@ require_once '../global.php';
         <div class="grid grid-cols-4 gap-32 flex justify-center ">
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/1.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/1.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -146,7 +146,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>img/2.png" alt="">
+              <img src="<?= CONTENT_URL ?>image/2.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -156,7 +156,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/3.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/3.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -166,7 +166,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/4.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/4.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -176,7 +176,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>img/5.png" alt="">
+              <img src="<?= CONTENT_URL ?>image/5.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -186,7 +186,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/6.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/6.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -196,7 +196,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/7.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/7.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -206,7 +206,7 @@ require_once '../global.php';
           </div>
           <div>
             <div class="py-4">
-              <img src="<?= CONTENT_URL ?>/img/8.png" alt="">
+              <img src="<?= CONTENT_URL ?>/image/8.png" alt="">
             </div>
             <a href="" class="text-center text-base font-bold  ">
               <li>Siro bổ phế Bối Mẫu Forte
@@ -242,8 +242,8 @@ require_once '../global.php';
               
               <a href=""><p class="leading-[90px] text-white text-center mb-[20px]">Tải ứng dụng mua thuốc trực tuyến</p></a>
               <div class="flex space-x-7 -mt-[35px] ml-[10px]">
-                  <img src="<?= CONTENT_URL ?>/img/ap.png" alt="">
-                  <img src="<?= CONTENT_URL ?>/img/gg.png" alt="">
+                  <img src="<?= CONTENT_URL ?>/image/ap.png" alt="">
+                  <img src="<?= CONTENT_URL ?>/image/gg.png" alt="">
               </div>
           </div>
       </div>
