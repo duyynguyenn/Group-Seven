@@ -1,4 +1,6 @@
-<h1 class="mx-[50px] text-[30px] mb-[50px]">DANH SÁCH DANH MỤC</h1>
+<div class=" bg-[#85CC73] mt-4 mx-[50px]">
+            <span class="leading-[64px]	text-[30px] pl-[20px]">DANH SÁCH DANH MỤC</span>
+        </div>
 <table class="mx-[50px] w-[1340px]">
     <thead>
         <tr>
