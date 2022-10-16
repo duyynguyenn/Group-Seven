@@ -17,10 +17,10 @@
         <ul class="text-white flex text-[30px] ml-[20px] space-x-10">
                 <li><a href="<?= ADMIN_URL ?>" class="hover:text-black">Trang chủ</a></li>
                 <li><a href="<?= ADMIN_URL . 'loai-hang/index.php' ?>" class="hover:text-black">Loại hàng</a></li>
-                <li><a href="/hang-hoa/" class="hover:text-black">Hàng hóa</a></li>
-                <li><a href="/khach-hang/" class="hover:text-black">Khách hàng</a></li>
-                <li><a href="/binh-luan/" class="hover:text-black">Bình luận</a></li>
-                <li><a href="/thong-ke/" class="hover:text-black">Thống kê</a></li>
+                <li><a href="<?= ADMIN_URL . 'hang-hoa/index.php' ?>" class="hover:text-black">Hàng hóa</a></li>
+                <li><a href="<?= ADMIN_URL . 'khach-hang/index.php' ?>" class="hover:text-black">Khách hàng</a></li>
+                <li><a href="<?= ADMIN_URL . 'binh-luan/index.php' ?>" class="hover:text-black">Bình luận</a></li>
+                <li><a href="<?= ADMIN_URL . 'thong-ke/index.php' ?>" class="hover:text-black">Thống kê</a></li>
             </ul>
 
         </div>

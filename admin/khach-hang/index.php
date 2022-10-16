@@ -1,9 +1,9 @@
 <?php 
 require_once '../../global.php';
 require_once '../../dao/base_dao.php';
-require_once '../../dao/categories_dao.php';
-if (isset($_GET['add'])) {
-    $VIEW_NAME = 'add.php';
+require_once '../../dao/users_dao.php';
+if (isset($_GET['detail'])) {
+    $VIEW_NAME = 'detail.php';
 }elseif (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $image = $_FILES['image'];
@@ -28,14 +28,9 @@ if (isset($_GET['add'])) {
     if ($err == []) {
       categories_insert($name, $image['name']);
       move_uploaded_file($image['tmp_name'], "../../content/image/" . $image['name']);
-      header("location: " . $ADMIN_URL . '/loai-hang/index.php');
+      header("location: " . $ADMIN_URL . '/khach-hang/index.php');
       die;
     }
-}else if(isset($_GET['edit'])){
-    $VIEW_NAME = 'edit.php';
-}else if(isset($_GET['remote'])){
-    header("location: " . ADMIN_URL . 'loai-hang/index.php');   
-    die;
 }else{
     $rows = categories_select_all();
     $VIEW_NAME = 'list.php';
