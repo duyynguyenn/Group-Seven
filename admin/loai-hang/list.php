@@ -1,10 +1,10 @@
-<h1 class="mx-[50px] text-[30px]">DANH SÁCH LOẠI HÀNG</h1>
+<h1 class="mx-[50px] text-[30px]">DANH SÁCH DANH MỤC</h1>
 <table class="mx-[50px] w-[1340px]">
     <thead>
         <tr>
             <th class="border border-slate-300"></th>
-            <th class="border border-slate-300">Mã Loại</th>
-            <th class="border border-slate-300">Tên Loại</th>
+            <th class="border border-slate-300">Mã</th>
+            <th class="border border-slate-300">Tên Danh mục</th>
             <th class="border border-slate-300">Hình ảnh</th>
             <th class="border border-slate-300">Thao tác</th>
         </tr>
