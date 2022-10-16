@@ -1,4 +1,4 @@
-<h1 class="mx-[50px] text-[30px]">DANH SÁCH DANH MỤC</h1>
+<h1 class="mx-[50px] text-[30px] mb-[50px]">DANH SÁCH DANH MỤC</h1>
 <table class="mx-[50px] w-[1340px]">
     <thead>
         <tr>
@@ -15,7 +15,7 @@
             <td class="border border-slate-300 text-center">1</td>
             <td class="border border-slate-300 text-center">Thuốc</td>
             <td class="border border-slate-300 text-center"><img src="<?= CONTENT_URL .'/image/1.png' ?>" alt=""></td>
-            <td class="border border-slate-300"><a href="<?= ADMIN_URL. 'loai-hang/index.php?edit' ?>" class="bg-[#D9D9D9] py-[3px] px-[10px] ml-[20px] mr-[20px]">Sửa</a>
+            <td class="border border-slate-300"><a href="<?= ADMIN_URL. 'loai-hang/index.php?edit&id=1' ?>" class="bg-[#D9D9D9] py-[3px] px-[10px] ml-[20px] mr-[20px]">Sửa</a>
                 <a href="" class="bg-[#D9D9D9] py-[3px] px-[10px]">Xóa</a> 
             </td>
     </tbody>

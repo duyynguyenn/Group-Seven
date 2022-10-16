@@ -1,4 +1,4 @@
-<h1 class="mx-[50px] text-[30px]">FORM SỬA DANH MỤC</h1>
+<h1 class="mx-[50px] text-[30px] mb-[50px]">FORM SỬA DANH MỤC</h1>
 <form action="" method="post" enctype="multipart/form-data" class="mx-[50px]">
     <p class="mt-[15px]">Tên Loại</p><br>
     <input type="text" name="ten-loai" id="" class="bg-[#D9D9D9] rounded-[10px] w-full h-[50px] mb-[15px] pl-[20px]"><br>
