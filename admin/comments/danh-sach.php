@@ -4,23 +4,24 @@
         <thead> 
             <tr>
                 <th>#</th>
-                <th>Name</th>
-                <th>Mail</th>
-                <th>Phone</th>
-                <th>Avatar</th>
+                <th>created-at</th>
+                <th>comment</th>
+                <th>users-id</th>
+                <th>product-id</th>
+                
             </tr>
         </thead>
         <tbody> 
             <?php if(count($list)  == 0 ) : ?>
-                <p>Danh Sách TRống</p>
+                <p>Comment TRống</p>
                 <?php else : ?>
             <?php foreach($list as $value) : ?>
                     <tr>
                         <td> <?php echo $value['id'] ?? "TRống" ?>  </td>
-                        <td> <?php echo $value['name'] ?? "TRống" ?> </td>
-                        <td> <?php echo $value['email'] ?? "TRống" ?> </td>
-                        <td> <?php echo $value['phone'] ?? "TRống" ?> </td>
-                        <td> <img src="<?php echo $value['avatar'] == '' ?: "https://png.pngtree.com/png-vector/20190805/ourlarge/pngtree-account-avatar-user-abstract-circle-background-flat-color-icon-png-image_1650938.jpg" ?>" alt="">  </td>
+                        <td> <?php echo $value['created-at'] ?? "TRống" ?> </td>
+                        <td> <?php echo $value['comment'] ?? "TRống" ?> </td>
+                        <td> <?php echo $value['users-id'] ?? "TRống" ?> </td>
+                        <td> <img src="<?php echo $value['product-id'] ?? "" ?>" alt="">  </td>
 
                     </tr>
 
