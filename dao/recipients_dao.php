@@ -13,16 +13,16 @@ function recipients_select_by_id($id)
   return pdo_query_one($sql, $id);
 }
 //thêm dữ liệu vào bảng
-function recipients_insert($name, $phone, $recipients_id, $user_id)
+function recipients_insert($name, $phone, $address, $user_id)
 {
-  $sql = "INSERT INTO recipients (name, phone,recipients_id, user_id) values(?,?,?,?,?)";
-  pdo_execute($sql,$name, $phone, $recipients_id, $user_id);
+  $sql = "INSERT INTO recipients (name, phone,address, user_id) values(?,?,?,?,?)";
+  pdo_execute($sql,$name, $phone, $address, $user_id);
 }
 //cập nhập dữ liệu dựa vào id
-function recipients_update($id, $name, $phone, $recipients_id, $user_id)
+function recipients_update($id, $name, $phone, $address, $user_id)
 {
-  $sql = "UPDATE recipients SET name = ?, price = ?, quantity = ?, featured = ?, active = ?, description = ?, category_id = ?, voucher_id = ?, brand_id = ? where id = ?";
-  pdo_execute($sql, $name, $phone, $recipients_id, $user_id, $id);
+  $sql = "UPDATE recipients SET name = ?, phone =?, address =?, user_id =? where id = ?";
+  pdo_execute($sql, $name, $phone, $address, $user_id, $id);
 }
 //xoá bản ghi dựa vào id
 function recipients_delete($id)
