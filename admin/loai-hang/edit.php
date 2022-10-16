@@ -7,7 +7,7 @@
     <input type="file" name="image" id="" class="bg-[#D9D9D9] rounded-[10px] w-full h-[50px] mb-[15px] pl-[20px] pt-[10px]"><br>
     <p><?= $err['image'] ?? '' ?></p>
     <div class="flex">
-        <input type="submit" name="submit" id="" value="Thêm mới"
+        <input type="submit" name="submit" id="" value="Hoàn tất sửa"
             class="w-[100px] h-[50px] mr-[40px] bg-[#D9D9D9] rounded-[8px] ">
         <input type="submit" name="nhap_lai" id="" value="Nhập lại"
             class="w-[100px] h-[50px] bg-[#D9D9D9] rounded-[8px] mr-[40px]">
