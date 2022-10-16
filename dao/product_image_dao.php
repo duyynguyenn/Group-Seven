@@ -1,5 +1,5 @@
 <?php
-require_once './dao/base_dao.php';
+require_once 'base_dao.php';
 // lấy toàn bộ dữ liệu của bảng
 function product_image_select_all()
 {
