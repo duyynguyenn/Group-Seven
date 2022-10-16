@@ -1,4 +1,3 @@
-
 <h1 class="mx-[50px] text-[30px]">THÊM MỚI LOẠI HÀNG</h1>
 <form action="" method="post" enctype="multipart/form-data" class="mx-[50px]">
     <p class="mt-[15px]">Tên Loại</p><br>
