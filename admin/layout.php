@@ -18,7 +18,7 @@
                 <li><a href="<?= ADMIN_URL ?>" class="hover:text-black">Trang chủ</a></li>
                 <li><a href="<?= ADMIN_URL . 'loai-hang/index.php' ?>" class="hover:text-black">Danh mục</a></li>
                 <li><a href="<?= ADMIN_URL . 'hang-hoa/index.php' ?>" class="hover:text-black">Hàng hóa</a></li>
-                <li><a href="<?= ADMIN_URL . 'khach-hang/index.php' ?>" class="hover:text-black">Khách hàng</a></li>
+                <li><a href="<?= ADMIN_URL . 'tai-khoan/index.php' ?>" class="hover:text-black">Khách hàng</a></li>
                 <li><a href="<?= ADMIN_URL . 'comments/index.php' ?>" class="hover:text-black">Bình luận</a></li>
                 <li><a href="<?= ADMIN_URL . 'thong-ke/index.php' ?>" class="hover:text-black">Thống kê</a></li>
             </ul>

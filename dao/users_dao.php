@@ -42,4 +42,28 @@ function users_delete($id)
   $removeUsersQuery = " delete from users where id = ? " ;
   pdo_execute ( $removeUsersQuery , $id ) ;
 }
+
+function user_store($name, $email, $password, $phone, $role_id, $avatar, $created_at = ''){
+  $sql = "insert into users 
+              (name, 
+              email, 
+              password,
+              phone, 
+              role_id, 
+              avatar,
+              created_at)
+          values 
+              (?, ?, ?, ?, ?, ?, ?)";
+  pdo_execute($sql, $name, $email, $password, $role_id, $avatar);
+}
+
+function get_all_users(){
+  $sql = "select 
+              u.*, 
+              r.name as role_name
+          from users u
+          join roles r
+              on r.id = u.role_id";
+  return pdo_query_one($sql);
+}
 ?>
