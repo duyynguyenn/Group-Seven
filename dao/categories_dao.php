@@ -15,7 +15,7 @@ function categories_select_by_id($id)
 //thêm dữ liệu vào bảng
 function categories_insert($name, $image)
 {
-  $sql = "INSERT INTO categories (name, image) values(?,?)";
+  $sql = "INSERT INTO categories (name, image) values(?, ?)";
   pdo_execute($sql, $name, $image);
 }
 //cập nhập dữ liệu dựa vào id
