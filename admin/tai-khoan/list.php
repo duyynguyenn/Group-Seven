@@ -15,7 +15,7 @@
                         <th class="border border-slate-300">SDT</th>
                         <th class="border border-slate-300">Quyền</th>  
                         <th class="border border-slate-300">Avatar</th>  
-                        <th class="border border-slate-300">Thời gian tạo</th>              
+                        <th class="border border-slate-300">Thao tác</th>              
                         
                         
                     </tr>
@@ -30,7 +30,10 @@
                         <td class="border border-slate-300"><?= $user['phone']?></td>
                         <td class="border border-slate-300"><?= $user['role_name']?></td>
                         <td class="border border-slate-300"><img style="max-width:100px ;" src="<?= CONTENT_URL ?>/image/<?= $user['avatar']?>" alt=""></td>
-                        <td class="border border-slate-300"><?= $user['created_at']?></td>
+                        <td class="border border-slate-300">
+                        <a href="">Sửa</a>
+                        <a href="">Xóa</a>
+                        </td>
                     </tr>
                     <?php endforeach?>
                     

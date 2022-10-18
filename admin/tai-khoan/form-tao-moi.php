@@ -26,7 +26,9 @@
             <?php endforeach?>
         </select>
     </div>
-    <div  class="mt-[50px] ml-[90px]">
-        <button type="submit" class="font-bold bg-orange-400 rounded-[5px] px-[20px] py-[8px] text-[24px]">Lưu</button>
+    <div  class="mt-[50px] ml-[40px] flex font-bold">
+        <button type="submit" class=" bg-orange-400 rounded-[8px] w-[100px] h-[50px] text-[24px] mr-[20px]">Lưu</button>
+        <input type="reset" name="" id="" value="Nhập lại"
+            class="w-[100px] h-[50px] bg-orange-400 rounded-[8px] text-[24px]">
     </div>
 </form>

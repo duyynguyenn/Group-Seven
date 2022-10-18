@@ -7,7 +7,6 @@ if(isset($_GET['tao-moi'])){
     $roles = role_all();
     $VIEW_NAME = "form-tao-moi.php";
 }elseif(isset($_GET['luu-tao-moi'])){
-    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
