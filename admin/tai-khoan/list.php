@@ -5,7 +5,7 @@
 <div class="mx-[50px] my-[20px] text-[20px] hover:text-red-500">
 <a href="<?= ADMIN_URL . 'tai-khoan/index.php?tao-moi'?>">Tạo mới</a>
 </div>
-<table class="w-[1340px] mx-[50px] mb-[50px]">
+<table class="w-[1340px] mx-[50px] mb-[50px]    ">
 
                 <thead class="">
                     <tr class="">
@@ -14,9 +14,10 @@
                         <th class="border border-slate-300">Email</th>
                         <th class="border border-slate-300">SDT</th>
                         <th class="border border-slate-300">Quyền</th>  
-                        <th class="border border-slate-300">Avatar</th>                
-                        <th class="border border-slate-300">Được tạo vào lúc</th>
-                        <th class="border border-slate-300">Thao tác</th>
+                        <th class="border border-slate-300">Avatar</th>  
+                        <th class="border border-slate-300">Thời gian tạo</th>              
+                        
+                        
                     </tr>
                 </thead>
                 <tbody class="">
@@ -28,7 +29,7 @@
                         <td class="border border-slate-300"><?= $user['email']?></td>
                         <td class="border border-slate-300"><?= $user['phone']?></td>
                         <td class="border border-slate-300"><?= $user['role_name']?></td>
-                        <td class="border border-slate-300"><img src="<?= CONTENT_URL ?>/image/<?= $user['avatar']?>" alt=""></td>
+                        <td class="border border-slate-300"><img style="max-width:100px ;" src="<?= CONTENT_URL ?>/image/<?= $user['avatar']?>" alt=""></td>
                         <td class="border border-slate-300"><?= $user['created_at']?></td>
                     </tr>
                     <?php endforeach?>

@@ -3,13 +3,13 @@
 require_once 'base_dao.php';
 function role_all(){
     $sql = "select * from roles";
-    return pdo_query_one($sql);
+    return pdo_query($sql);
 }
 
-function create_user($name, $email, $password, $role_id){
-    $sqlQuery = 'insert into users (name, email, password, role_id) 
-                values (?, ?, ?, ?)';
-    pdo_execute($sqlQuery, $name, $email, $password, $role_id);
+function create_user($name, $email, $password, $phone, $role_id){
+    $sqlQuery = 'insert into users (name, email, password, phone, role_id) 
+                values (?, ?, ?, ?, ?)';
+    pdo_execute($sqlQuery, $name, $email, $password, $phone, $role_id);
 }
 
 function role_destroy($id){

@@ -64,6 +64,6 @@ function get_all_users(){
           from users u
           join roles r
               on r.id = u.role_id";
-  return pdo_query_one($sql);
+  return pdo_query($sql);
 }
 ?>
