@@ -81,14 +81,17 @@
                                     <tr style="text-align: center;">
                                         <td width="50px">1</td>
                                         <td style="text-align:center">
-                                            <img src="" alt="" style="width: 50px">
+                                            <input type="file">
                                         </td>
                                         <td>thuốc</td>
                                         <td class="b-500 red"><span>200 VNĐ</span></td>
                                         <td width="100px">2</td>
                                         <td class="b-500 red"><span> 200 VNĐ</span></td>
                                         <td>
-                                            <button class="btn btn-danger")>Xoá</button>
+                                            <button class="btn btn-danger">Sửa</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-danger">Xoá</button>
                                         </td>
                                     </tr>
                             </tbody>
