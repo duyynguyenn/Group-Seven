@@ -15,14 +15,14 @@ function users_select_by_id($id)
 //thêm dữ liệu vào bảng
 function users_insert($name, $email , $password , $phone , $role_id , $avatar )
 {
-  $sql = "INSERT INTO users (name, email, password, phone, role_id, avatar) values(?,?,?,?,?,?)";
+  $sql = "INSERT INTO users (name, email, password, phone, role_id, avatar) values (?,?,?,?,?,?)";
   pdo_execute($sql, $name, $email , $password , $phone , $role_id , $avatar );
 }
 //cập nhập dữ liệu dựa vào id
-function users_update($id, $name, $email , $password , $phone , $role_id)
+function users_update($id, $name, $email , $password , $phone , $role_id , $avatar )
 {
-  $sql = "UPDATE users SET name = ?, email = ? , password = ? , phone = ? , role_id = ? where id = ?";
-  pdo_execute($sql, $name, $email , $password , $phone , $role_id , $id);
+  $sql = "UPDATE users SET name = ?, email = ? , password = ? , phone = ? , role_id = ? ,avatar = ? where id = ?";
+  pdo_execute($sql, $name, $email , $password , $phone , $role_id , $avatar  , $id);
 }
 //xoá bản ghi dựa vào id
 function users_delete($id)

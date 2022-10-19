@@ -35,8 +35,7 @@
             <td class="border border-slate-300">
                 <?= $user['role_name'] ?>
             </td>
-            <td class="border border-slate-300"><img style="max-width:100px ;"
-                    src="<?= CONTENT_URL ?>/image/<?= $user['avatar'] ?>" alt=""></td>
+            <td class="border border-slate-300"><img style="max-width:100px ;" src="<?= CONTENT_URL ?>/image/<?= $user['avatar']?>" alt=""></td>
             <td class="border border-slate-300">
                 <a href="index.php?edit&id=<?= $user['id']?>" class="bg-[#D9D9D9] py-[3px] px-[10px]">Sửa</a>
                 <a href="index.php?delete&id=<?= $user['id']?>" class="bg-[#D9D9D9] py-[3px] px-[10px]" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</a>

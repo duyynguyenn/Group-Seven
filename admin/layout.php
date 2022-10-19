@@ -20,7 +20,7 @@
                 <li><a href="<?= ADMIN_URL . 'hang-hoa/index.php' ?>" class="hover:text-black">Hàng hóa</a></li>
                 <li><a href="<?= ADMIN_URL . 'tai-khoan/index.php' ?>" class="hover:text-black">Khách hàng</a></li>
                 <li><a href="<?= ADMIN_URL . 'comments/index.php' ?>" class="hover:text-black">Bình luận</a></li>
-                <li><a href="<?= ADMIN_URL . 'thong-ke/index.php' ?>" class="hover:text-black">Thống kê</a></li>
+                <li><a href="<?= ADMIN_URL . 'thongke/index.php' ?>" class="hover:text-black">Thống kê</a></li>
             </ul>
 
         </div>
