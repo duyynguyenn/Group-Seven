@@ -21,7 +21,7 @@
                         <td> <?php echo $value['comment'] ?? "TRống" ?> </td>
                         <td> <?php echo $value['users-id'] ?? "TRống" ?> </td>
                         <td> <img src="<?php echo $value['product-id'] ?? "" ?>" alt="">  </td>
-
+                        
                     </tr>
 
                 <?php endforeach; ?>
