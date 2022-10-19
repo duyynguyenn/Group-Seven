@@ -13,16 +13,16 @@ function users_select_by_id($id)
   return pdo_query_one($sql, $id);
 }
 //thêm dữ liệu vào bảng
-function users_insert($name, $email , $password , $phone , $admin , $avatar , $created_at )
+function users_insert($name, $email , $password , $phone , $role_id , $avatar )
 {
-  $sql = "INSERT INTO users (name, image) values(?,?,?,?,?,?,?)";
-  pdo_execute($sql, $name, $email , $password , $phone , $admin , $avatar , $created_at);
+  $sql = "INSERT INTO users (name, email, password, phone, role_id, avatar) values(?,?,?,?,?,?)";
+  pdo_execute($sql, $name, $email , $password , $phone , $role_id , $avatar );
 }
 //cập nhập dữ liệu dựa vào id
-function users_update($id, $name, $email , $password , $phone , $admin , $avatar , $created_at )
+function users_update($id, $name, $email , $password , $phone , $role_id)
 {
-  $sql = "UPDATE users SET name = ?, email = ? , password = ? , phone = ? , avatar = ? , created_at = ? where id = ?";
-  pdo_execute($sql, $name, $email , $password , $phone , $admin , $avatar , $created_at, $id);
+  $sql = "UPDATE users SET name = ?, email = ? , password = ? , phone = ? , role_id = ? where id = ?";
+  pdo_execute($sql, $name, $email , $password , $phone , $role_id , $id);
 }
 //xoá bản ghi dựa vào id
 function users_delete($id)
@@ -43,18 +43,17 @@ function users_delete($id)
   pdo_execute ( $removeUsersQuery , $id ) ;
 }
 
-function user_store($name, $email, $password, $phone, $role_id, $avatar, $created_at = ''){
+function user_store($name, $email, $password, $phone, $role_id, $avatar = ''){
   $sql = "insert into users 
               (name, 
               email, 
               password,
               phone, 
               role_id, 
-              avatar,
-              created_at)
+              avatar)
           values 
-              (?, ?, ?, ?, ?, ?, ?)";
-  pdo_execute($sql, $name, $email, $password, $role_id, $avatar);
+              (?, ?, ?, ?, ?, ?)";
+  pdo_execute($sql, $name, $email, $password, $phone, $role_id, $avatar);
 }
 
 function get_all_users(){

@@ -18,7 +18,8 @@
             <td class="border border-slate-300 text-center"><?= $row['id'] ?? "" ?></td>
             <td class="border border-slate-300 text-center"><?= $row['name'] ?? "" ?></td>
             <td class="border border-slate-300 text-center"><img style="max-width:100px ;" src="<?= CONTENT_URL ?>/image/<?= $row['image'] ?? "" ?>" alt=""></td>
-            <td class="border border-slate-300"><a href="index.php?edit&id=<?= $row['id'] ?? "" ?>" class="bg-[#D9D9D9] py-[3px] px-[10px] ml-[20px] mr-[20px]">Sửa</a>
+            <td class="border border-slate-300">
+                <a href="index.php?edit&id=<?= $row['id'] ?? "" ?>" class="bg-[#D9D9D9] py-[3px] px-[10px] ml-[20px] mr-[20px]">Sửa</a>
                 <a href="index.php?delete&id=<?= $row['id'] ?? "" ?>" class="bg-[#D9D9D9] py-[3px] px-[10px]" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</a> 
             </td>
         </tr>
