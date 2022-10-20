@@ -5,18 +5,22 @@
     <div class="my-[25px]">
         <label for="" class="font-semibold">Tên người dùng:</label>
         <input type="text" name="name" class="bg-[#D9D9D9] border border-black">
+        <p class="text-red-600"><?= $err['name'] ?? '' ?></p>
     </div>
     <div class="">
         <label class="mr-[73px] font-semibold" for="">Email:</label>
         <input type="email" name="email" class="bg-[#D9D9D9] border border-black">
+        <p class="text-red-600"><?= $err['email'] ?? '' ?></p>
     </div>
     <div class="mt-[25px]">
         <label class="mr-[16px] font-semibold" for="">Số điện thoại:</label>
         <input type="text" name="phone" class="bg-[#D9D9D9] border border-black">
+        <p class="text-red-600"><?= $err['phone'] ?? '' ?></p>
     </div>
     <div  class="my-[25px]  ">
         <label for="" class="font-semibold mr-[43px]">Mật khẩu:</label>
         <input type="password" name="password" class="bg-[#D9D9D9] border border-black">
+        <p class="text-red-600"><?= $err['hash_password'] ?? '' ?></p>
     </div>
     <div  class="">
         <label for="" class="font-semibold mr-[63px]">Quyền:</label>
@@ -25,6 +29,7 @@
                 <option value="<?= $role['id']?>"><?= $role['name']?></option>
             <?php endforeach?>
         </select>
+        <p class="text-red-600"><?= $err['role_id'] ?? '' ?></p>
     </div>
     <div class="mt-[25px]">
         <label class="mr-[16px] font-semibold" for="">Ảnh:</label>

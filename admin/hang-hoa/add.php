@@ -1,58 +1,47 @@
-<h2 class="bg-[#85CC73] text-[#24432B] mx-[150px] text-[36px] py-[33px] pl-[20px] mb-[45px]">THÊM MỚI HÀNG HÓA
-        </h2>
-        <form action="">
-            <div class="mx-[150px] grid grid-cols-3 gap-[100px]">
-                <div>
-                    <p class="text-[36px] mb-[15px]">MÃ HÀNG HÓA</p>
-                    <input type="text" name="" id="" value="AUTO NUMBER" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-                <div>
-                    <p class="text-[36px] mb-[15px]">TÊN HÀNG HÓA</p>
-                    <input type="text" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-                <div>
-                    <p class="text-[36px] mb-[15px]">ĐƠN GIÁ</p>
-                    <input type="text" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-            </div>
+<div class=" bg-[#85CC73] my-4 mx-[50px]">
+            <span class="leading-[64px]	text-[30px] pl-[20px]">THÊM MỚI HÀNG HÓA</span>
+        </div>
+<form action="<?= ADMIN_URL . 'hang-hoa/index.php?insert'?>" method="post" enctype="multipart/form-data">
+        <div class="mx-[50px]">
+            <p class="font-semibold mb-[15px]">TÊN HÀNG HÓA</p>
+            <input type="text" name="name" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px]">
+            <p class="text-red-600"><?= $err['name'] ?? '' ?></p>
+        </div>
+        <div class="mx-[50px]">
+            <p class="font-semibold mb-[15px]">ĐƠN GIÁ</p>
+            <input type="text" name="price" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px]">
+            <p class="text-red-600"><?= $err['price'] ?? '' ?></p>
+        </div>
+        <div class="mx-[50px]">
+        <p class="font-semibold mb-[15px]">HÌNH ẢNH</p>
+        <input type="file" name="image" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px]">
+        <p class="text-red-600"><?= $err['image'] ?? '' ?></p>
+    </div>
     
-            <div class="mx-[150px] grid grid-cols-3 gap-[100px] my-[30px]">
-                <div>
-                    <p class="text-[36px] mb-[15px]">GIẢM GIÁ</p>
-                    <input type="text" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-                <div>
-                    <p class="text-[36px] mb-[15px]">HÌNH ẢNH</p>
-                    <input type="file" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-                <div>
-                    <p class="text-[36px] mb-[15px]">LOẠI HÀNG</p>
-                    <input type="text" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-            </div>
+    <div class="mx-[50px]">
+        <p class="font-semibold mb-[15px]">SỐ LƯỢNG</p>
+        <input type="text" name="quantity" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px]">
+        <p class="text-red-600"><?= $err['quantity'] ?? '' ?></p>
+    </div>
     
-            <div class="mx-[150px] grid grid-cols-3 gap-[100px]">
-                <div>
-                    <p class="text-[36px] mb-[15px]">HÀNG ĐẶC BIỆT</p>
-                    <input type="text" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-                <div>
-                    <p class="text-[36px] mb-[15px]">NGÀY NHẬP</p>
-                    <input type="text" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-                <div>
-                    <p class="text-[36px] mb-[15px]">SỐ LƯỢNG XEM</p>
-                    <input type="text" name="" id="" class="py-[18px] pl-[30px] w-[320px] bg-[#D9D9D9]">
-                </div>
-            </div>
+    <div class="mx-[50px]">
+    <label for="" class="font-semibold ">DANH MỤC</label><br>
+        <select name="category_id" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px] ">
+            <?php foreach($cate as $cates): ?>
+                <option value="<?= $cates['id']?>"><?= $cates['name']?></option>
+            <?php endforeach?>
+        </select>
+    </div>
+    <div class="mx-[50px] mb-[15px]">
+        <h2 class=" mb-[15px] font-semibold">MÔ TẢ</h2>
+        <textarea class="bg-[#D9D9D9]" name="description" id="" cols="147" rows="6"></textarea>
+        <p class="text-red-600"><?= $err['description'] ?? '' ?></p>
+    </div>
     
-            <div class="mx-[150px] mt-[30px]">
-                <h2 class="text-[36px] mb-[15px]">MÔ TẢ</h2>
-                <textarea class="bg-[#D9D9D9]" name="" id="" cols="147" rows="6"></textarea>
-            </div>
-            <div class="flex mx-[150px] mt-[15px] text-[30px] space-x-5 mb-[100px]">
-                <button type="submit" class="bg-[#E0D0D0] py-[10px] px-[23px] text-black rounded-[10px]">Thêm mới</button>
-                <button type="submit" class="bg-[#E0D0D0] py-[10px] px-[23px] text-black rounded-[10px]">Nhập lại</button>
-                <button type="submit" class="bg-[#E0D0D0] py-[10px] px-[23px] text-black rounded-[10px]">Danh sách</button>
-            </div>
-        </form>
+    <div class="flex font-bold mx-[50px] mb-[55px]">
+        <input type="submit" name="submit" id="" value="Thêm mới"
+            class="w-[100px] h-[50px] mr-[40px] bg-[#D9D9D9] rounded-[8px] ">
+        <input type="reset" name="nhap_lai" id="" value="Nhập lại"
+            class="w-[100px] h-[50px] bg-[#D9D9D9] rounded-[8px] mr-[40px]">
+    </div>
+</form>

@@ -13,16 +13,16 @@ function products_select_by_id($id)
   return pdo_query_one($sql, $id);
 }
 //thêm dữ liệu vào bảng
-function products_insert($name, $price, $quantity, $description,$brand,$related_id,$category_id)
+function products_insert($name, $price,$image, $quantity,$category_id, $description)
 {
-  $sql = "INSERT INTO products (name, price,quantity,description,brand,related_id,category_id) values(?,?,?,?,?,?,?)";
-  pdo_execute($sql, $name, $price, $quantity, $description,$brand,$related_id,$category_id);
+  $sql = "INSERT INTO products (name, price,image,quantity,category_id,description) values(?,?,?,?,?,?)";
+  pdo_execute($sql, $name, $price,$image, $quantity,$category_id, $description);
 }
 //cập nhập dữ liệu dựa vào id
-function products_update($id,$name, $price, $quantity, $description,$brand,$related_id,$category_id)
+function products_update($id,$name, $price,$image, $quantity,$category_id, $description)
 {
-  $sql = "UPDATE products SET name = ?, price = ?, quantity = ?, description = ?,brand =?,related_id=?, category_id = ? where id = ?";
-  pdo_execute($sql,$name, $price, $quantity, $description,$brand,$related_id,$category_id, $id);
+  $sql = "UPDATE products SET name = ?, price = ?, image = ?, quantity = ?,category_id =?,description=? where id = ?";
+  pdo_execute($sql,$name, $price,$image, $quantity,$category_id, $description, $id);
 }
 //xoá bản ghi dựa vào id
 function products_delete($id)
@@ -35,6 +35,15 @@ function products_delete($id)
   pdo_execute ( $removeOder_detailWithProducts , $id ) ;
   $removeProductsQuery = " delete from products where id = ? " ;
   pdo_execute ( $removeProductsQuery , $id ) ;
+}
+function get_all_products(){
+  $sql = "select 
+              u.*, 
+              r.name as category_name
+          from products u
+          join categories r
+              on r.id = u.category_id";
+  return pdo_query($sql);
 }
 ?>
 

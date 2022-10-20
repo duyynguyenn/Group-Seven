@@ -19,6 +19,15 @@ if (isset($_GET['tao-moi'])) {
         if ($name == '') {
             $err['name'] = "Cần có dữ liệu";
         }
+        if ($email == '') {
+            $err['email'] = "Cần có dữ liệu";
+        }
+        if ($hash_password == '') {
+            $err['hash_password'] = "Cần có dữ liệu";
+        }
+        if ($phone == '') {
+            $err['phone'] = "Cần có dữ liệu";
+        }
         if ($avatar['size'] == 0) {
             $err['image'] = "Cần có hình";
         } elseif ($avatar['size'] > 2 * 1024 * 1024) {
@@ -56,9 +65,6 @@ if (isset($_GET['tao-moi'])) {
         $avatar = $_FILES['avatar'];
         $prev_img = $_POST['prev_img'];
         $err = [];
-        if ($name == '') {
-            $err['name'] = "Cần có dữ liệu";
-        }
         if ($avatar['size'] > 2 * 1024 * 1024) {
             $err['image'] = "Hình đã lớn hơn 2mb";
         } elseif ($avatar['size'] > 0 && $avatar['size'] <= 2 * 1024 * 1024) {

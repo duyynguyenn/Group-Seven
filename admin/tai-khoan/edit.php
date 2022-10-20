@@ -31,7 +31,6 @@
     <input type="hidden" value="<?= $row['avatar'] ?>" name="prev_img">
         <label class="mr-[16px] font-semibold" for="">Ảnh:</label>
         <input type="file" name="avatar" id="" class="bg-[#D9D9D9] rounded-[10px] w-full h-[50px] mb-[15px] pl-[20px] pt-[10px]"><br>
-    <p><?= $err['image'] ?? '' ?></p>
     </div>
     <div class="mt-[50px] ml-[40px] flex font-bold">
         <button type="submit" name="submit" class=" bg-orange-400 rounded-[8px] w-[120px] h-[50px] text-[24px] mr-[20px]">Cập
