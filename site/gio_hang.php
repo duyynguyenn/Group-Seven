@@ -1,121 +1,151 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['giohang'])) $_SESSION['giohang']=[];
+    //làm rỗng giỏ hàng
+    if(isset($_GET['delcart'])&&($_GET['delcart']==1)) unset($_SESSION['giohang']);
+    //xóa sp trong giỏ hàng
+    if(isset($_GET['delid'])&&($_GET['delid']>=0)){
+       array_splice($_SESSION['giohang'],$_GET['delid'],1);
+    }
+    //lấy dữ liệu từ form
+    if(isset($_POST['addcart'])&&($_POST['addcart'])){
+        $hinh=$_POST['hinh'];
+        $tensp=$_POST['tensp'];
+        $gia=$_POST['gia'];
+        $soluong=$_POST['soluong'];
+
+        //kiem tra sp co trong gio hang hay khong?
+
+        $fl=0; //kiem tra sp co trung trong gio hang khong?
+
+        for ($i=0; $i < sizeof($_SESSION['giohang']); $i++) { 
+            
+            if($_SESSION['giohang'][$i][1]==$tensp){
+                $fl=1;
+                $soluongnew=$soluong+$_SESSION['giohang'][$i][3];
+                $_SESSION['giohang'][$i][3]=$soluongnew;
+                break;
+
+            }
+            
+        }
+        //neu khong trung sp trong gio hang thi them moi
+        if($fl==0){
+            //them moi sp vao gio hang
+            $sp=[$hinh,$tensp,$gia,$soluong];
+            $_SESSION['giohang'][]=$sp;
+        }
+
+       // var_dump($_SESSION['giohang']);
+    }
+
+    function showgiohang(){
+        if(isset($_SESSION['giohang'])&&(is_array($_SESSION['giohang']))){
+            if(sizeof($_SESSION['giohang'])>0){
+                $tong=0;
+                for ($i=0; $i < sizeof($_SESSION['giohang']); $i++) { 
+                    $tt=$_SESSION['giohang'][$i][2] * $_SESSION['giohang'][$i][3];
+                    $tong+=$tt;
+                    echo '<tr>
+                            <td>'.($i+1).'</td>
+                            <td><img src="image/'.$_SESSION['giohang'][$i][0].'" alt=""></td>
+                            <td>'.$_SESSION['giohang'][$i][1].'</td>
+                            <td>'.$_SESSION['giohang'][$i][2].'</td>
+                            <td>'.$_SESSION['giohang'][$i][3].'</td>
+                            <td>
+                                <div>'.$tt.'</div>
+                            </td>
+                            <td>
+                                <a href="gio_hang.php?delid='.$i.'">Xóa</a>
+                            </td>
+                        </tr>';
+                }
+                echo '<tr>
+                        <th colspan="5">Tổng đơn hàng</th>
+                        <th>
+                            <div>'.$tong.'</div>
+                        </th>
+    
+                    </tr>';
+            }else{
+                echo "Giỏ hàng rỗng!";
+            }    
+        }
+    }
+    
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"  Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
-    <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="">
-    <script src="https://cdn.tailwindcss.com/3.1.3"></script>
-    <title>Giỏ hàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="m-0 p-0 box-border">
-  <div class="mx-[10px] max-w-[1440px] mx-auto">
-  <section class="bg-[#253796] flex justify-around ">
-    <img class="py-[30px] " src="upload/img/logo.png" alt="">
-    <form class="bg-[#AE2B2B] flex h-[76px] w-[482px] rounded-[50px]  my-[25px]">
-        <input type="text" name="" id="" value="Tìm sản phẩm" class="pl-[37px] bg-[#AE2B2B] rounded-l-[50px] text-[32px] text-white border-r-2 border-black">
-        <button class="ml-[20px] w-[40px]"><img src="upload/icons/magnifying.svg" alt=""></button>
-    </form>
-    <div class="flex  pl-[30px]">
-        <a href="" class="flex">
-            <p class="text-[30px] text-white my-[30px] w-[91px] leading-[35px]">Giỏ hàng</p>
-            <img src="upload/icons/bag.svg" class="w-[65px]" alt="">
-        </a>
-        <a href="" class="">
-            <p class="my-[30px] ml-[50px] w-[198px] h-[65px] bg-[#FFFFFF] text-[32px] text-center pt-[5px]">Đăng nhập</p>
-        </a>
-    </div>
-    </section>
-
-    <section>
-      <ul class="flex text-[32px] justify-around border-black border-b-2 pb-[8px] pt-[8px]">
-          <li><a href="" class=" border-r-2 border-black  pr-[40px] pb-[12px] pt-[10px] hover:text-orange-400">Thực phẩm chức năng
-          </a></li>
-          <li><a href="" class="  pr-[120px] pb-[12px] border-r-2 border-black pt-[10px] hover:text-orange-400">Thuốc</a></li>
-          <li><a href="" class=" border-r-2 border-black pr-[120px] pb-[12px] pt-[10px] hover:text-orange-400">Bệnh</a></li>
-          <li><a href="" class=" pb-[10px] hover:text-orange-400" >Thông tin hỗ trợ</a></li>
-      </ul>
-  </section>
-
-    <div id="wrapper">
-        <main style="padding-bottom: 4rem;">
-            <section class="cart">
-                <div class="container-top">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading" style="padding: 1rem 0;">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="">Giỏ hàng</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="">Lịch sử mua hàng</a>
-                                </li>
-                            </ul>
-                            <h2 style="padding-top:2rem" class="">Giỏ hàng</h2>
-                        </div>
-                        <div class="panel-body"></div>
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr style="font-weight: 500;text-align: center;">
-                                    <td width="50px">STT</td>
-                                    <td>Ảnh</td>
-                                    <td>Tên Sản Phẩm</td>
-                                    <td>Giá</td>
-                                    <td>Số lượng</td>
-                                    <td>Tổng tiền</td>
-                                    <td width="50px"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                    <tr style="text-align: center;">
-                                        <td width="50px">1</td>
-                                        <td style="text-align:center">
-                                            <input type="file">
-                                        </td>
-                                        <td>thuốc</td>
-                                        <td class="b-500 red"><span>200 VNĐ</span></td>
-                                        <td width="100px">2</td>
-                                        <td class="b-500 red"><span> 200 VNĐ</span></td>
-                                        <td>
-                                            <button class="btn btn-danger">Sửa</button>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-danger">Xoá</button>
-                                        </td>
-                                    </tr>
-                            </tbody>
-                        </table>
-                        <p>Tổng đơn hàng: <span class="red bold">100<span> VNĐ</span></span></p>
-                        <a href=""><button class="btn btn-success">Thanh toán</button></a>
-                    </div>
-                </div>
-            </section>
-        </main>
+<body>
+<div class="row mb">
+    <div class="boxtrai mr">
+        <div class="row">
+            <h1>THÔNG TIN NHẬN HÀNG</h1>
+            <table class="thongtinnhanhang">
+                <tr>
+                    <td width="20%">Họ tên</td>
+                    <td><input type="text" name="hoten"></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text" name="diachi"></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="text" name="dienthoai"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+            </table>
         </div>
+        <div class="row mb">
+            <h1>GIỎ HÀNG</h1>
+            <table>
+                <tr>
+                    <th>STT</th>
+                    <th>Hình</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền ($)</th>
+                </tr>
+                <?php showgiohang(); ?>
+                <!-- <tr>
+                    <td>1</td>
+                    <td><img src="images/1.jpg" alt=""></td>
+                    <td>Đồng hồ</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>
+                        <div>10</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="5">Tổng đơn hàng</th>
+                    <th>
+                        <div>10</div>
+                    </th>
+
+                </tr> -->
+            </table>
+        </div>
+        <div class="row mb">
+                    <input type="submit" value="ĐỒNG Ý ĐẶT HÀNG" name="dongydathang">
+                    <a href="chitietsp.php?delcart=1"><input type="button" value="XÓA GIỎ HÀNG"></a>
+                    <a href="chitietsp.php"><input type="button" value="TIẾP TỤC ĐẶT HÀNG"></a>
+                </div>
+    </div>
+</div>
 </body>
-<style>
-    .b-500 {
-        font-weight: 500;
-    }
-
-    .bold {
-        font-weight: bold;
-    }
-
-    .red {
-        color: rgba(207, 16, 16, 0.815);
-    }
-</style>
-
 </html>

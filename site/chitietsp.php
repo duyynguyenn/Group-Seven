@@ -7,8 +7,9 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com/3.1.3"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="m-0 p-0 box-border">
+<body class="m-0 p-0 box-border bg-scroll">
     <div class="mx-[10px] max-w-[1440px] mx-auto">
         <section class="bg-[#253796] flex justify-around ">
         <img class="py-[30px] " src="image/logo.png" alt="">
@@ -80,17 +81,35 @@
                 <div class="bg-[#F7EEEE] block text-center font-bold rounded-[20px]">
                     <img src="image/menu1.png" class="w-[225px] mx-[85px] mt-[17px]">
                     <p class="text-[20px] my-[20px]">Viên uống Trùng Thảo Gold giúp ngủ ngon thành công</p>
-                    <button type="submit" class="bg-[#DFA40D] rounded-[40px] text-[30px] w-[180px] py-[10px] mb-[26px]">Mua</button>
+                   <form action="gio_hang.php" method= "post">
+                   <input type="number" name="soluong" min="1" max="10" value="1">
+                    <input type="submit" name="addcart" value="Đặt hàng">
+                    <input type="hidden" name="tensp" value="Viên uống Trùng Thảo Gold giúp ngủ ngon thành công">
+                    <input type="hidden" name="gia" value="115.000">
+                    <input type="hidden" name="hinh" value="1.png">
+                   </form>
                 </div>
                 <div class="bg-[#F7EEEE] block text-center font-bold rounded-[20px]">
                     <img src="image/menu1.png" class="w-[225px] mx-[85px] mt-[17px]">
                     <p class="text-[20px] my-[20px]">Viên uống Trùng Thảo Gold giúp ngủ ngon thành công</p>
-                    <button type="submit" class="bg-[#DFA40D] rounded-[40px] text-[30px] w-[180px] py-[10px] mb-[26px]">Mua</button>
+                    <form action="gio_hang.php" method= "post">
+                   <input type="number" name="soluong" min="1" max="10" value="1">
+                    <input type="submit" name="addcart" value="Đặt hàng">
+                    <input type="hidden" name="tensp" value="Viên uống Trùng Thảo Gold giúp ngủ ngon thành công">
+                    <input type="hidden" name="gia" value="115.000">
+                    <input type="hidden" name="hinh" value="2.png">
+                   </form>
                 </div>
                 <div class="bg-[#F7EEEE] block text-center font-bold rounded-[20px]">
                     <img src="image/menu1.png" class="w-[225px] mx-[85px] mt-[17px]">
                     <p class="text-[20px] my-[20px]">Viên uống Trùng Thảo Gold giúp ngủ ngon thành công</p>
-                    <button type="submit" class="bg-[#DFA40D] rounded-[40px] text-[30px] w-[180px] py-[10px] mb-[26px]">Mua</button>
+                    <form action="gio_hang.php" method= "post">
+                   <input type="number" name="soluong" min="1" max="10" value="1">
+                    <input type="submit" name="addcart" value="Đặt hàng">
+                    <input type="hidden" name="tensp" value="Viên uống Trùng Thảo Gold giúp ngủ ngon thành công">
+                    <input type="hidden" name="gia" value="115.000">
+                    <input type="hidden" name="hinh" value="3.png">
+                   </form>
                 </div>
             </div>
         </section>
