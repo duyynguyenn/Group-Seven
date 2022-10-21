@@ -16,6 +16,7 @@ if (isset($_GET['giohang'])) {
 
   $VIEW_NAME = 'tai_khoan.php';
 } else {
+  require_once './dao/base_dao.php';
   $products =  products_select_all();
   $VIEW_NAME = 'home.php';
 }
