@@ -9,7 +9,7 @@
         </div>
         <div class="mx-[50px]">
             <p class="font-semibold mb-[15px]">ĐƠN GIÁ</p>
-            <input type="text" name="price" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px]">
+            <input type="number" name="price" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px]">
             <p class="text-red-600"><?= $err['price'] ?? '' ?></p>
         </div>
         <div class="mx-[50px]">
