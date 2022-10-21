@@ -1,5 +1,6 @@
 <?php 
 require_once '../global.php';
+$VIEW_NAME ='';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +46,7 @@ require_once '../global.php';
 
     
     <main>
-      <?php include_once $VIEW_NAME ?>
+      
     </main>
 
 

@@ -19,7 +19,7 @@ if (isset($_GET['giohang'])) {
   require_once './dao/base_dao.php';
   $products =  products_select_all();
   $VIEW_NAME = 'home.php';
-}
+};
 
 
 include_once './layout.php';
