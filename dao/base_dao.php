@@ -76,4 +76,20 @@
           unset($conn);
           }
           }
+
+
+
+
+          // test đăng nhập,đăng ký
+    
+        function pdo_login($sql){
+            $connect = pdo_get_connection();
+            $stmt = $connect->prepare($sql);
+            $stmt -> execute();
+            $Result = $stmt -> fetch(PDO::FETCH_ASSOC);
+    
+            // $Result = $connect->query($sql);
+    
+            return $Result;
+        }
           ?>
