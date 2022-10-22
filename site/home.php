@@ -11,7 +11,7 @@
             <?php  foreach($products as $value) :  ?>
             <div>
                 <div class="py-4">
-                    <img src="<?= CONTENT_URL ?>/image/ảnh thuốc siro,forte-mom 1.png" alt="">
+                    <img src="<?= $value['image'] ?>" alt="">
                 </div>
                 <a href="" class="text-center text-base font-bold  ">
                     <li> <?php echo $value["name"] ?></li>
