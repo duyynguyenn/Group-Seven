@@ -1,5 +1,5 @@
 <?php
-    require_once "../../dao/pdo.php";
+    require_once "../../dao/base_dao.php";
     require_once "../../dao/users.php";
 
     if(isset($_GET['add'])){
@@ -26,10 +26,7 @@
         header("location:../users/index.php");
         die;
     }
-    else{
-        $item = user_selectall();
-        $VIEW_NAME = 'list.php';
-    }
+   
 
     if(isset($_POST['btn_update'])){
         $id = $_GET['id'];
@@ -42,6 +39,10 @@
         
         user_update($password,$fullname,$email,$phone,$address,$id_position,$id);
         
+        $item = user_selectall();
+        $VIEW_NAME = 'list.php';
+    }
+    else{
         $item = user_selectall();
         $VIEW_NAME = 'list.php';
     }
