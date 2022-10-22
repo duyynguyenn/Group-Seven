@@ -10,7 +10,7 @@ if (isset($_GET['add'])) {
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $price = $_POST['price'];
-        $image = $_FILES['image'];
+        $image = '.../imgdb' .$_FILES['image']['name'];
         $quantity = $_POST['quantity'];
         $category_id = $_POST['category_id'];
         $description = $_POST['description'];
