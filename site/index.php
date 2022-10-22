@@ -1,4 +1,7 @@
 <?php 
+
+
+
 require_once '../global.php';
 if (isset($_GET['giohang'])) {
 
@@ -16,10 +19,13 @@ if (isset($_GET['giohang'])) {
 
   $VIEW_NAME = 'tai_khoan.php';
 } else {
-  require_once './dao/base_dao.php';
+  require_once '../dao/base_dao.php';
+  require_once '../dao/products_dao.php';
+  require_once '../dao/product_image_dao.php';
   $products =  products_select_all();
   $VIEW_NAME = 'home.php';
-};
+  
+}
 
 
 include_once './layout.php';
