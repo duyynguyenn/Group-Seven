@@ -15,8 +15,7 @@ if (isset($_GET['add'])) {
         $category_id = $_POST['category_id'];
         $description = $_POST['description'];
         $err = [];
-        $fileImg = "imgdb/";
-        $Liss = $fileImg . $image;
+        
 
         if ($name == '') {
             $err['name'] = "Cần có dữ liệu";
@@ -44,8 +43,8 @@ if (isset($_GET['add'])) {
             }
         }
         if ($err == []) {
-            products_insert($name, $price,$image, $quantity,$category_id, $description);
-            move_uploaded_file($_FILES["image"]['tmp_name'],  $liss);
+            products_insert($name, $price,$image['name'], $quantity,$category_id, $description);
+            move_uploaded_file($image['tmp_name'], "../../content/image/" . $image['name']);
             header('location: ' . ADMIN_URL . 'hang-hoa/index.php');
             die;
         }
