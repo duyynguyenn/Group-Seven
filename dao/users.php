@@ -19,9 +19,9 @@
         pdo_execute($sql,$password,$fullname,$email,$phone,$address,$id_position);
     }
      //Thêm tài khoản
-     function user_insert_register($password,$fullname,$email,$id_position){
-        $sql = "INSERT INTO users(password,fullname,email,id_position) VALUES(?,?,?,?)";
-        pdo_execute($sql,$password,$fullname,$email,$id_position);
+     function user_insert_register($password,$name,$email){
+        $sql = "INSERT INTO users(password,name,email VALUES(?,?,?)";
+        pdo_execute($sql,$password,$name,$email);
     }
     function user_update($password,$fullname,$email,$phone,$address,$id_position,$id){
         $sql = "UPDATE users SET password = ?,fullname = ?,email = ?,phone = ?,address = ?,id_position = ? WHERE id = ?";

@@ -6,10 +6,10 @@ function role_all(){
     return pdo_query($sql);
 }
 
-function create_user($name, $email, $password, $phone, $role_id, $avatar){
-    $sqlQuery = 'insert into users (name, email, password, phone, role_id, avatar) 
-                values (?, ?, ?, ?, ?, ?)';
-    pdo_execute($sqlQuery, $name, $email, $password, $phone, $role_id, $avatar);
+function create_user($name, $email, $password, $role_id){
+    $sqlQuery = 'insert into users (name, email, password, role_id) 
+                values (?, ?, ?, ?)';
+    pdo_execute($sqlQuery, $name, $email, $password, $role_id);
 }
 
 function role_destroy($id){

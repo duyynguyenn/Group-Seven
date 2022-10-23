@@ -70,4 +70,11 @@ const ADMIN_URL = BASE_URL ."admin/";
 //   // }
 //  }
 
+function check_admin_role(){
+  if(isset($_SESSION['auth']) && $_SESSION['auth']['role_id'] == 2){
+      return true;
+  }
+
+  return false;
+}
 ?>

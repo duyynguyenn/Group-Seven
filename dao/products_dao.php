@@ -45,5 +45,6 @@ function get_all_products(){
               on r.id = u.category_id";
   return pdo_query($sql);
 }
+
 ?>
 
