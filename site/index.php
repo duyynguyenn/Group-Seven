@@ -57,9 +57,9 @@ elseif(isset($_GET['chi-tiet'])){
   require_once '../dao/product_dao.php';
   require_once '../dao/product_color_dao.php';
   // lấy thông tin sản phẩm dựa vào id trên đường dẫn
-  $product = get_product_by_id($_GET['id']);
+  $product = products_select_by_id($_GET['id']);
   // lấy ra tất cả sản phẩm cùng danh mục với sản phẩm vừa lấy được ở trên
-  $r_products = get_products_by_cate_ids([$product['category_id']]);
+
   // trong danh sách sản phẩm liên quan
   // loại bỏ sản phẩm đang xem
   $relate_products = array_filter($r_products, function($item) use ($product){

@@ -15,8 +15,8 @@
         </tr>
     </thead>
     <tbody>
-    <?php if (count($rows) == 0) : ?>
-        <?php else : ?>
+    <!-- <?php if (count($rows) == 0) : ?>
+        <?php else : ?> -->
                 <?php foreach ($rows as $row) : ?>
         <tr>
             <td class="border border-slate-300 text-center"><?= $row['id'] ?? "" ?></td>
@@ -34,7 +34,7 @@
             </td>
         </tr>
          <?php endforeach; ?>
-              <?php endif; ?>
+              <!-- <?php endif; ?> -->
     </tbody>
 </table>
 

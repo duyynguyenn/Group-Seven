@@ -10,7 +10,7 @@ if (isset($_GET['add'])) {
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $price = $_POST['price'];
-        $image = '.../imgdb' .$_FILES['image']['name'];
+        $image = $_FILES['image'];
         $quantity = $_POST['quantity'];
         $category_id = $_POST['category_id'];
         $description = $_POST['description'];
@@ -35,7 +35,7 @@ if (isset($_GET['add'])) {
 
             $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
             $ext = strtolower($ext);
-            if ($ext == 'jpg' || $ext == 'png') {
+            if ($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg') {
             } else {
                 $err['image'] = "không đúng định dạng";
             }
