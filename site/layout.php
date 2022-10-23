@@ -21,7 +21,7 @@ require_once '../global.php';
         <button class="ml-[20px] w-[40px]"><img src="<?= CONTENT_URL ?>/image/icons/magnifying.svg" alt=""></button>
     </form>
     <div class="flex  pl-[30px]">
-        <a href="" class="flex">
+        <a href="gio_hang.php" class="flex">
             <p class="text-[30px] text-white my-[30px] w-[91px] leading-[35px]">Giỏ hàng</p>
             <img src="<?= CONTENT_URL ?>/image/icons/bag.svg" class="w-[65px]" alt="">
         </a>
