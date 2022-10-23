@@ -22,7 +22,7 @@
             <td class="border border-slate-300 text-center"><?= $row['id'] ?? "" ?></td>
             <td class="border border-slate-300 text-center"><?= $row['name'] ?? "" ?></td>
             <td class="border border-slate-300 text-center"><?= $row['price'] ?? "" ?> VNĐ</td>
-            <td class="border border-slate-300 text-center"><img style="max-width:100px ;" src="<?= CONTENT_URL ?>/image/<?= $row['image'] ?? "" ?>" alt=""></td>
+            <td class="border border-slate-300 text-center"><img style="max-width:100px ;" src="<?= $row["image"] ?>" alt=""></td>
             <td class="border border-slate-300 text-center"><?= $row['quantity'] ?? "" ?></td>
             <td class="border border-slate-300 text-center"><?= $row['category_name'] ?? "" ?></td>
             <td class="border border-slate-300 text-center"><?= $row['description'] ?? "" ?></td>
