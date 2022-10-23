@@ -41,7 +41,7 @@
     </div>
     <div class="mx-[50px] mb-[15px]">
         <h2 class=" mb-[15px] font-semibold">MÔ TẢ</h2>
-        <textarea class="bg-[#D9D9D9]" name="description" id="" cols="147" rows="6"> value="<?= $row['description'] ?? '' ?>"</textarea>
+        <textarea class="bg-[#D9D9D9]" name="description" id="" cols="147" rows="6"><?= $row['description'] ?? '' ?></textarea>
         
     </div>
     

@@ -32,7 +32,7 @@ require_once '../global.php';
     </section>
 
     <section>
-        <ul class="flex text-[32px] justify-around  ">
+        <ul class="flex text-[32px] justify-around border-black  border-b-2 pb-[5px]">
             <li><a href="Trangchu.html" class=" border-r-2 border-black pr-[40px] pb-[10px]">Thực phẩm chức năng
             </a></li>
             <li><a href="ChitietSP.html" class="  pr-[120px] pb-[10px] border-r-2 border-black">Thuốc</a></li>
@@ -52,7 +52,7 @@ require_once '../global.php';
 
   </div>
 
-  <section class="bg-[#D9D9D9] text-[12px] font-bold">
+  <section class="bg-[#D9D9D9] text-[12px] font-bold mt-[50px]">
             <div class="flex justify-around py-[50px]">
                 <div class="block leading-[40px]">
                     <ul><li><a href="">Về chúng tôi</a></li>
@@ -77,8 +77,8 @@ require_once '../global.php';
                     
                     <a href=""><p class="leading-[90px] text-white text-center mb-[20px]">Tải ứng dụng mua thuốc trực tuyến</p></a>
                     <div class="flex space-x-7 -mt-[35px] ml-[10px]">
-                        <img src="image/ap.png" alt="">
-                        <img src="image/gg.png" alt="">
+                        <img src="<?= CONTENT_URL . '/image/ap.png'?>" alt="">
+                        <img src="<?= CONTENT_URL . '/image/gg.png' ?>" alt="">
                     </div>
                 </div>
             </div>
