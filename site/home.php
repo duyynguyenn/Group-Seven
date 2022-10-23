@@ -13,11 +13,11 @@
             <?php  foreach($products as $value) :  ?>
             <div>
                 <div class="py-4">
-                    <a href=""><img  src="<?= CONTENT_URL ?>/image/<?= $value['image']?>" alt=""></a>
+                    <a href=""><img src="<?= CONTENT_URL ?>/image/<?= $value['image'] ?? "" ?>" alt=""></a>
                 </div>
                 <a href="" class="text-center text-base font-bold  ">
-                    <li> <?php echo $value["name"] ?></li>
-                    <li class="py-2 text-red-600"><?php echo $value["price"] ?>đ</li>
+                    <li> <?php echo $value["name"] ?? "" ?></li>
+                    <li class="py-2 text-red-600"><?php echo $value["price"] ?? "" ?>đ</li>
                 </a>
             </div>
             <?php  endforeach  ?>
