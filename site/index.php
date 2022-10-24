@@ -43,7 +43,19 @@ if (isset($_GET['giohang'])) {
 } elseif (isset($_GET['phanhoi'])) {
 
   $VIEW_NAME = 'phanhoi.php';
-} elseif (isset($_GET['dangky'])) {
+} elseif(isset($_GET['gui-binh-luan'])){
+  require_once '../../global.php';
+  // require_once '../dao/base_dao.php';
+  // require_once '../dao/comments_dao.php';
+  // $created_at = $_POST['time'];
+  // $comment = $_POST['binhluan'];
+  // $user_id = "";
+  // $product_id = "";
+
+  // comments_insert($created_at, $comment,$user_id,$product_id);
+  $VIEW_NAME = 'phanhoi.php';
+
+}elseif (isset($_GET['dangky'])) {
 
   $VIEW_NAME = 'dangky.php';
 } elseif (isset($_GET['dangnhap'])) {

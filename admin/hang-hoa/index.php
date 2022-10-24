@@ -67,6 +67,7 @@ if (isset($_GET['add'])) {
         $description = $_POST['description'];
         $prev_img = $_POST['prev_img'];
         $err = [];
+        var_dump($image["name"]);
         if ($image['size'] > 2 * 1024 * 1024) {
             $err['image'] = "Hình đã lớn hơn 2mb";
         } elseif ($image['size'] > 0 && $image['size'] <= 2 * 1024 * 1024) {
