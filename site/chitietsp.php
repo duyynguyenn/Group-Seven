@@ -39,7 +39,7 @@
             </div>
             <div class="grid grid-cols-3 gap-[56px] mb-[80px]">
                 <div class="bg-[#F7EEEE] block text-center font-bold rounded-[20px]">
-                    <img src="image/menu1.png" class="w-[225px] mx-[85px] mt-[17px]">
+                    <img src="<?= CONTENT_URL . 'image/menu1.png' ?>" class="w-[225px] mx-[85px] mt-[17px]">
                     <p class="text-[20px] my-[20px]">Viên uống Trùng Thảo Gold giúp ngủ ngon thành công</p>
                    <form action="gio_hang.php" method= "post">
                    <input type="number" name="soluong" min="1" max="10" value="1">
@@ -50,7 +50,7 @@
                    </form>
                 </div>
                 <div class="bg-[#F7EEEE] block text-center font-bold rounded-[20px]">
-                    <img src="image/menu1.png" class="w-[225px] mx-[85px] mt-[17px]">
+                    <img src="<?= CONTENT_URL . 'image/menu1.png' ?>" class="w-[225px] mx-[85px] mt-[17px]">
                     <p class="text-[20px] my-[20px]">Viên uống Trùng </p>
                     <form action="gio_hang.php" method= "post">
                    <input type="number" name="soluong" min="1" max="10" value="1">
@@ -61,7 +61,7 @@
                    </form>
                 </div>
                 <div class="bg-[#F7EEEE] block text-center font-bold rounded-[20px]">
-                    <img src="image/menu1.png" class="w-[225px] mx-[85px] mt-[17px]">
+                    <img src="<?= CONTENT_URL . 'image/menu1.png' ?>" class="w-[225px] mx-[85px] mt-[17px]">
                     <p class="text-[20px] my-[20px]">Viên uống giúp ngủ ngon thành công</p>
                     <form action="gio_hang.php" method= "post">
                    <input type="number" name="soluong" min="1" max="10" value="1">
