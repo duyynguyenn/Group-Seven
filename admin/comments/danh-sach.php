@@ -1,5 +1,5 @@
- <h1>Danh Sách Users</h1>
-    <table>
+ <h1 class=" bg-[#85CC73] my-8 mx-[50px]">Danh Sách Users</h1>
+    <table class=" bg-[#85CC73] my-8 mx-[50px] w-full">
         <thead> 
             <tr>
                 <th>#</th>
@@ -20,7 +20,7 @@
                         <td> <?php echo $value['created-at'] ?? "TRống" ?> </td>
                         <td> <?php echo $value['comment'] ?? "TRống" ?> </td>
                         <td> <?php echo $value['users-id'] ?? "TRống" ?> </td>
-                        <td> <img src="<?php echo $value['product-id'] ?? "" ?>" alt="">  </td>
+                        <td> <img src="<?php echo $value['product-id'] ?? "TRống" ?>" alt="">  </td>
                         
                     </tr>
 
