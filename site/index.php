@@ -66,29 +66,17 @@ if (isset($_GET['giohang'])) {
   $VIEW_NAME = 'tai_khoan.php';
 }
 elseif(isset($_GET['chi-tiet'])){
-  require_once '../dao/product_dao.php';
-  require_once '../dao/product_color_dao.php';
-  // lấy thông tin sản phẩm dựa vào id trên đường dẫn
-  $product = products_select_by_id($_GET['id']);
-  // lấy ra tất cả sản phẩm cùng danh mục với sản phẩm vừa lấy được ở trên
-
-  // trong danh sách sản phẩm liên quan
-  // loại bỏ sản phẩm đang xem
-  $relate_products = array_filter($r_products, function($item) use ($product){
-      return $item['id'] != $product['id'];
-  });
-
-
-  // echo "<pre>";
-  // var_dump($relate_products);die;
-  $VIEW_NAME = 'chi-tiet.php';}
- else {
-  require_once '../dao/base_dao.php';
+  require_once '../dao/categories_dao.php';
   require_once '../dao/products_dao.php';
-  require_once '../dao/product_image_dao.php';
+  $rows_cate = categories_select_all();
+  $get_id = $_GET['id'] ?? "";
+  $row = products_select_by_id($get_id);
+  $VIEW_NAME = 'chitietsp.php';
+}
+ else {
+  require_once '../dao/products_dao.php';
   $products =  products_select_all();
   $VIEW_NAME = 'home.php';
-  
 }
 
 
@@ -96,6 +84,6 @@ elseif(isset($_GET['chi-tiet'])){
 
 
 
-include_once './layout.php';
+include_once 'layout.php';
 
 ?>
