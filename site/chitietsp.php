@@ -19,13 +19,12 @@
                     <div class="flex"><p class="font-bold">Số lượng còn : <p> <?= $row['quantity'] ?> Hộp</p> </p></div>
                     <p class="text-[24px] font-bold mt-[22px]">Chọn số lượng:</p>
                     <form class="text-white text-[30px] font-bold" action="gio_hang.php" method="post">     
-<<<<<<< HEAD
+
                         <input type="number" name="soluong" min="1" max="10" value="1" class="bg-[#F7EEEE] text-black"><br>
                         <input type="submit" name="addcart" value="Đặt hàng">
                         <input type="hidden" name="tensp" value="Hộp">
                         <input type="hidden" name="gia" value="300.000">
                         <input type="hidden" name="hinh" value="5.png">
-=======
                        
                     </form>
                 </div>
