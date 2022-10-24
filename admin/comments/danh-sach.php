@@ -10,13 +10,13 @@
                 
             </tr>
         </thead>
-        <tbody> 
+        <tbody > 
             <?php if(count($list)  == 0 ) : ?>
                 <p>Comment TRống</p>
                 <?php else : ?>
             <?php foreach($list as $value) : ?>
                     <tr>
-                        <td> <?php echo $value['id'] ?? "TRống" ?>  </td>
+                        <td > <?php echo $value['id'] ?? "TRống" ?>  </td>
                         <td> <?php echo $value['created-at'] ?? "TRống" ?> </td>
                         <td> <?php echo $value['comment'] ?? "TRống" ?> </td>
                         <td> <?php echo $value['users-id'] ?? "TRống" ?> </td>
