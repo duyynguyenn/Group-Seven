@@ -30,13 +30,15 @@
     <label for="" class="font-semibold ">DANH MỤC</label><br>
     <?php if (count($rows_cate) == 0) : ?>
         <?php else : ?>
+            
         <select name="category_id" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px] ">
         <?php foreach ($rows_cate as $cate) : ?>
                 <option <?= $cate['id'] == $row['category_id'] ? 'selected' : "" ?> value="<?= $cate['id'] ?? "" ?>">
                   <?= $cate['name'] ?? "" ?>
                 </option>
+                <?php endforeach; ?>
         </select>
-        <?php endforeach; ?>
+        
         <?php endif ?>
     </div>
     <div class="mx-[50px] mb-[15px]">

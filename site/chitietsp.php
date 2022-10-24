@@ -8,12 +8,15 @@
                 <div class="mt-[23px]">
                     <p class="text-[36px] font-medium my-[12px]" ><?= $row['name'] ?></p>
                     <h3 class="text-[40px] font-bold"><?= $row['price'] ?></h3>
-                    <?php foreach ($rows_cate as $cate) : ?>
-                <option  value="<?= $cate['id']?>">
-                Danh mục:  <?= $cate['name']?>
+        
+                    <!-- <?php foreach ($rows_cate as $cate) : ?>
+                <option <?= $cate['id'] == $row['category_id'] ? 'selected' : "" ?> value="<?= $cate['id'] ?? "" ?>">
+                  <a href=""><?= $cate['name'] ?? "" ?></a>
                 </option>
-        <?php endforeach; ?>
-                    <p>Chi tiết sản phẩm:<?= $row['description'] ?></p>
+                <?php endforeach; ?> -->
+                
+                    <p class="font-bold">Chi tiết sản phẩm <p><?= $row['description'] ?></p></p>
+                    <div class="flex"><p class="font-bold">Số lượng còn : <p> <?= $row['quantity'] ?> Hộp</p> </p></div>
                     <p class="text-[24px] font-bold mt-[22px]">Chọn số lượng:</p>
                     <form class="text-white text-[30px] font-bold" action="gio_hang.php" method="post">     
                         <input type="number" name="soluong" min="1" max="10" value="1" class="bg-[#F7EEEE] text-black"><br>
@@ -26,7 +29,7 @@
         <section class="mt-[27px] ml-[79px] mr-[46px]">
             <div class="flex mb-[18px]">
                 <div class="">
-                    <img src="image/ngoi-sao.png" alt="">
+                    <img src="<?= CONTENT_URL . 'image/ngoi-sao.png' ?>" alt="">
                 </div>
                 <p class="text-[32px] font-bold ml-[21px] mt-[15px]">Sản phẩm liên quan</p>
             </div>

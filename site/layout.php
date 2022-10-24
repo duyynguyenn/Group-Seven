@@ -11,7 +11,7 @@
 <body>
   <div class="mx-[10px] max-w-[1440px] mx-auto">
     <section class="bg-[#253796] flex justify-around ">
-    <img class="py-[30px] " src="<?= CONTENT_URL . '/image/logo.png'?>" alt="">
+    <a href="<?= SITE_URL . '' ?>" ><img class="py-[30px] " src="<?= CONTENT_URL . '/image/logo.png'?>" alt=""></a>
     <form class="bg-[#AE2B2B] flex h-[76px] w-[482px] rounded-[50px]  my-[25px]">
         <input type="text" name="" id="" value="Tìm sản phẩm" class="pl-[37px] bg-[#AE2B2B] rounded-l-[50px] text-[32px] text-white border-r-2 border-black">
         <button class="ml-[20px] w-[40px]"><img src="<?= CONTENT_URL ?>/image/icons/magnifying.svg" alt=""></button>
