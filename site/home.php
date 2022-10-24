@@ -18,7 +18,7 @@
                 </div>
                 <div href="" class="text-center text-base font-bold  ">
                     <li> <?php echo $value["name"] ?? "" ?></li>
-                    <li class="py-2 text-red-600"><?php echo $value["price"] ?? "" ?>đ</li>
+                    <li class="py-2 text-red-600"><?php echo $value["price"] ?? "" ?></li>
                 </div>
                  </a>
             </div>
