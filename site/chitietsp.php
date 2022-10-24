@@ -1,70 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com/3.1.3"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="m-0 p-0 box-border bg-scroll">
-    <div class="mx-[10px] max-w-[1440px] mx-auto">
-        <section class="bg-[#253796] flex justify-around ">
-        <img class="py-[30px] " src="image/logo.png" alt="">
-        <form class="bg-[#AE2B2B] flex h-[76px] w-[482px] rounded-[50px]  my-[25px]">
-            <input type="text" name="" id="" value="Tìm sản phẩm" class="pl-[37px] bg-[#AE2B2B] rounded-l-[50px] text-[32px] text-white border-r-2 border-black">
-            <button class="ml-[20px] w-[40px]"><img src="image/icons/magnifying.svg" alt=""></button>
-        </form>
-        <div class="flex  pl-[30px]">
-            <a href="" class="flex">
-                <p class="text-[30px] text-white my-[30px] w-[91px] leading-[35px]">Giỏ hàng</p>
-                <img src="image/icons/bag.svg" class="w-[65px]" alt="">
-            </a>
-            <a href="" class="">
-                <p class="my-[30px] ml-[50px] w-[198px] h-[65px] bg-[#FFFFFF] text-[32px] text-center pt-[5px]">Đăng nhập</p>
-            </a>
-        </div>
-        </section>
 
         <section>
-            <ul class="flex text-[32px] justify-around  ">
-                <li><a href="Trangchu.html" class=" border-r-2 border-black pr-[40px] pb-[10px]">Thực phẩm chức năng
-                </a></li>
-                <li><a href="ChitietSP.html" class="  pr-[120px] pb-[10px] border-r-2 border-black">Thuốc</a></li>
-                <li><a href="Hoidap.html" class=" border-r-2 border-black pr-[120px] pb-[10px]">Bệnh</a></li>
-                <li><a href="" class=" pb-[10px]" >Thông tin hỗ trợ</a></li>
-            </ul>
-        </section>
-        <section class="mt-[10px]">
-            <img src="image/banner.png" alt="">
-        </section>
-        <section>
             <div class="grid grid-cols-2 gap-[93px]">
+           
                 <div>
-                    <img class="ml-[164px] mt-[200px] mb-[28px]" src="image/anh1.png" alt="">
-                    <div class="flex">
-                        <img class=" h-[226px]" src="image/anh2.png" alt="">
-                        <img class=" h-[226px]" src="image/anh3.png" alt="">
-                        <img class=" h-[226px]" src="image/anh4.png" alt="">
-                    </div>
+                    <img class="ml-[64px] mt-[20px]" src="<?= CONTENT_URL ?>/image/<?= $row['image'] ?>" alt="">
                 </div>
                 <div class="mt-[23px]">
-                    <p class="text-[24px] font-medium ">Thương hiệu: <span class="text-blue-800">Optimax</span> </p>
-                    <p class="text-[36px] font-medium my-[12px]" >Viên Sủi Optimax Immunity Booster Vid - Fighter Tăng Sức Đề Kháng 20 Viên</p>
-                    <h3 class="text-[40px] font-bold">115.000đ /Hộp</h3>
-                    <p class="text-[24px] font-medium  w-[473px]">Danh mục:  Tăng sức đề kháng, miễn dịch<br>
-                        Dạng bào chế:  Viên sủi<br>
-                        Quy cách:  Tuýp 20 viên<br>
-                        Xuất xứ thương hiệu:  Mỹ<br>
-                        Nhà sản xuất:  Invapharm., Inc<br>
-                        Nước sản xuất:  Hoa Kỳ<br>
-                        Công dụng:  Optimax Immunity Booster Vid-Fighter giúp bổ sung vitamin C, vitamin D, kẽm và mangan cho cơ thể, giúp tăng cường sức đề kháng.
-                    </p>
-                    <p class="text-[24px] font-bold my-[22px]">Chọn số lượng:</p>
-                    <form class="text-white text-[30px] font-bold">
-                        <button type="submit" class=" bg-[#302887] rounded-[40px] w-[359px] py-[8px] mr-[14px]">Thêm vào giỏ hàng</button>
+                    <p class="text-[36px] font-medium my-[12px]" ><?= $row['name'] ?></p>
+                    <h3 class="text-[40px] font-bold"><?= $row['price'] ?></h3>
+                    <?php foreach ($rows_cate as $cate) : ?>
+                <option  value="<?= $cate['id']?>">
+                Danh mục:  <?= $cate['name']?>
+                </option>
+        <?php endforeach; ?>
+                    <p>Chi tiết sản phẩm:<?= $row['description'] ?></p>
+                    <p class="text-[24px] font-bold mt-[22px]">Chọn số lượng:</p>
+                    <form class="text-white text-[30px] font-bold" action="gio_hang.php" method="post">     
+                        <input type="number" name="soluong" min="1" max="10" value="1" class="bg-[#F7EEEE] text-black"><br>
+                        <button type="submit" name="addcart" class=" bg-[#302887] rounded-[40px] w-[359px] py-[8px] mr-[14px] mt-[10px]">Thêm vào giỏ hàng</button>
                         <button type="submit" class="bg-[#DFA40D] rounded-[40px] w-[200px] py-[8px]">Mua</button>
                     </form>
                 </div>
@@ -121,38 +74,5 @@
             </form>
             <textarea class="bg-[#F1EBEB] rounded-[50px] mt-[39px] mb-[54px]" name="" id="" cols="163" rows="11"></textarea>
         </section>
-        <section class="bg-[#D9D9D9] text-[12px] font-bold">
-            <div class="flex justify-around py-[50px]">
-                <div class="block leading-[40px]">
-                    <ul><li><a href="">Về chúng tôi</a></li>
-                        <li><a href="">Thuốc</a></li>
-                        <li><a href="">Bệnh</a></li></ul>
-                </div>
-                <div class="block leading-[40px]">
-                    <ul>
-                        <li><a href="">Bảo vệ sức khỏe</a></li>
-                        <li><a href="">Trang thiết bị y tế</a></li>
-                        <li><a href="">Góc sức khỏe</a></li>
-                    </ul>
-                </div>
-                <div class="block leading-[40px]">
-                    <ul>
-                        <li><a href="">Vitamin</a></li>
-                        <li><a href="">Hỗ trợ điều trị</a></li>
-                        <li><a href="">Cải thiện tăng sức đề kháng</a></li>
-                    </ul>
-                </div>
-                <div class="bg-[#DC1212] w-[271px] h-[135px] rounded-[20px]">
-                    
-                    <a href=""><p class="leading-[90px] text-white text-center mb-[20px]">Tải ứng dụng mua thuốc trực tuyến</p></a>
-                    <div class="flex space-x-7 -mt-[35px] ml-[10px]">
-                        <img src="image/ap.png" alt="">
-                        <img src="image/gg.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+
     
-</body>
-</html>

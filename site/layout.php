@@ -1,7 +1,3 @@
-<?php 
-require_once '../global.php';
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
