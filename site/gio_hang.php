@@ -142,8 +142,8 @@
         </div>
         <div class="row mb">
                     <input type="submit" value="ĐỒNG Ý ĐẶT HÀNG" name="dongydathang">
-                    <a href="chitietsp.php?delcart=1"><input type="button" value="XÓA GIỎ HÀNG"></a>
-                    <a href="chitietsp.php"><input type="button" value="TIẾP TỤC ĐẶT HÀNG"></a>
+                    <a href="index.php?delcart=1"><input type="button" value="XÓA GIỎ HÀNG"></a>
+                    <a href="index.php"><input type="button" value="TIẾP TỤC ĐẶT HÀNG"></a>
                 </div>
     </div>
 </div>
