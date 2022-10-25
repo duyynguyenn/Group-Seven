@@ -1,4 +1,5 @@
 <?php
+//ép dữ liệu trong giỏ hàng
     session_start();
     if(!isset($_SESSION['giohang'])) $_SESSION['giohang']=[];
     //làm rỗng giỏ hàng
@@ -39,6 +40,7 @@
        // var_dump($_SESSION['giohang']);
     }
 
+    //show ra dữ liệu trong giỏ hàng
     function showgiohang(){
         if(isset($_SESSION['giohang'])&&(is_array($_SESSION['giohang']))){
             if(sizeof($_SESSION['giohang'])>0){
