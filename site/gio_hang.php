@@ -121,6 +121,7 @@
                     <th>Đơn giá</th>
                     <th>Số lượng</th>
                     <th>Thành tiền ($)</th>
+                    <th>Xóa</th>
                 </tr>
                 <?php showgiohang(); ?>
                 <!-- <tr>
