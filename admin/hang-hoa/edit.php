@@ -1,7 +1,7 @@
 <div class=" bg-[#85CC73] my-4 mx-[50px]">
             <span class="leading-[64px]	text-[30px] pl-[20px]">FORM SỬA HÀNG HÓA</span>
         </div>
-<form action="index.php?update&id=<?= $get_id ?>" method="post" enctype="multipart/form-data">
+<form action="index.php?update&id=<?= $get_id ?>" method="post" enctype="multipart/form-data" >
         <div class="mx-[50px]">
             <p class="font-semibold mb-[15px]">TÊN HÀNG HÓA</p>
             <input type="text" name="name" id="" class="bg-[#D9D9D9] rounded-[10px] w-[300px] h-[40px] mb-[15px]" value="<?= $row['name'] ?? '' ?>">

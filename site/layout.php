@@ -29,10 +29,10 @@
 
     <section>
         <ul class="flex text-[32px] justify-around border-black  border-b-2 pb-[5px]">
-            <li><a href="Trangchu.html" class=" border-r-2 border-black pr-[40px] pb-[10px]">Thực phẩm chức năng
+            <li><a href="" class=" border-r-2 border-black pr-[40px] pb-[10px]">Thực phẩm chức năng
             </a></li>
-            <li><a href="ChitietSP.html" class="  pr-[120px] pb-[10px] border-r-2 border-black">Thuốc</a></li>
-            <li><a href="Hoidap.html" class=" border-r-2 border-black pr-[120px] pb-[10px]">Bệnh</a></li>
+            <li><a href="<?= SITE_URL . '' ?>" class="  pr-[120px] pb-[10px] border-r-2 border-black">Thuốc</a></li>
+            <li><a href="" class=" border-r-2 border-black pr-[120px] pb-[10px]">Bệnh</a></li>
             <li><a href="" class=" pb-[10px]" >Thông tin hỗ trợ</a></li>
         </ul>
     </section>
