@@ -3,29 +3,22 @@
             <div class="grid grid-cols-2 gap-[93px]">
            
                 <div>
-                    <img class="ml-[64px] mt-[20px]" src="<?= CONTENT_URL ?>/image/<?= $row['image'] ?>" alt="">
+                    <img class="ml-[64px] mt-[20px] mx-auto" src="<?= CONTENT_URL ?>/image/<?= $row['image'] ?>" alt="">
                 </div>
                 <div class="mt-[23px]">
                     <p class="text-[36px] font-medium my-[12px]" ><?= $row['name'] ?></p>
-                    <h3 class="text-[40px] font-bold"><?= $row['price'] ?></h3>
-        
-                    <!-- <?php foreach ($rows_cate as $cate) : ?>
-                <option <?= $cate['id'] == $row['category_id'] ? 'selected' : "" ?> value="<?= $cate['id'] ?? "" ?>">
-                  <a href=""><?= $cate['name'] ?? "" ?></a>
-                </option>
-                <?php endforeach; ?> -->
-                
+                    <h3 class="text-[40px] font-bold"><?= $row['price'] ?></h3>            
                     <p class="font-bold">Chi tiết sản phẩm <p><?= $row['description'] ?></p></p>
                     <div class="flex"><p class="font-bold">Số lượng còn : <p> <?= $row['quantity'] ?> Hộp</p> </p></div>
                     <p class="text-[24px] font-bold mt-[22px]">Chọn số lượng:</p>
                     <form class="text-white text-[30px] font-bold" action="gio_hang.php" method="post">     
 
-                        <input type="number" name="soluong" min="1" max="10" value="1" class="bg-[#F7EEEE] text-black"><br>
-                        <input type="submit" name="addcart" value="Đặt hàng">
-                        <input type="hidden" name="tensp" value="Hộp">
-                        <input type="hidden" name="gia" value="300.000">
+                        <input type="number" name="soluong" min="1" max="10" value="1" class="bg-[#F7EEEE] text-black text-center rounded-[10px]"><br>
+                        <input type="submit" name="addcart" value="Đặt hàng" class="bg-[#DFA40D] w-[200px] h-[75px] rounded-[10px] mt-[15px]">
+                        <input type="hidden" name="tensp" value="<?= $row['name'] ?>">
+                        <input type="hidden" name="gia" value="<?= $row['price'] ?>">
                         <input type="hidden" name="hinh" value="5.png">
-                       
+                       <input type="submit" name="addcart" value="Thêm vào giỏ hàng" class="ml-[15px] bg-[#302887] h-[75px] rounded-[10px] px-[4px]">
                     </form>
                 </div>
             </div>
